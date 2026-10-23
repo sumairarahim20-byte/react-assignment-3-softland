@@ -1,0 +1,104 @@
+
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* ==============================
+   SOFTLAND — GLOBAL STYLES
+============================== */
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --softland-primary: #6557d7;
+  --softland-primary-dark: #5146c8;
+  --softland-text: #0f172a;
+  --softland-muted: #64748b;
+  --softland-light: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--softland-primary);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
